@@ -18,6 +18,11 @@ async def hello(ctx):
 
 
 @bot.command()
+async def help(ctx):
+  await ctx.send("Привет! Есть команды repeat число слово, а также команда hello!")
+
+
+@bot.command()
 async def repeat(ctx, times: int, content='repeating...'):
   """Repeats a message multiple times."""
   for i in range(times):
